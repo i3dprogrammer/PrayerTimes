@@ -1,0 +1,65 @@
+html {
+    font-size: 25px;
+    font-family: Tahoma, Geneva, Verdana, sans-serif
+}
+
+.container {
+    display: flex;
+    justify-content: space-between;
+}
+
+.schedule {
+    margin-right: 40px;
+    display: flex;
+    /* background-color: blue; */
+    flex: 0 1 47%;
+}
+
+.schedule .name, .schedule .time {
+    display: flex;
+    flex-direction: column;
+    flex: 0 1 50%;
+}
+
+
+.current {
+    margin-left: 40px;
+    /* background-color: green; */
+    flex: 0 1 47%;
+    font-size: 35px;
+}
+
+.time-left {
+    margin-top: 10px;
+    background-color: rgb(89, 119, 29);
+    color: #fff;
+    padding: 10px 100px;
+    text-align: center;
+}
+
+.item {
+    padding: 10px;
+    display: flex;
+    align-items: center;
+}
+
+.item:nth-child(odd) {
+    background-color: rgb(230, 230, 230);
+}
+
+.item:nth-child(even) {
+    background-color: #fff;
+}
+
+.item:first-child {
+    background-color: rgb(170, 170, 170);
+}
+
+.red {
+    color: rgb(172, 30, 30);
+    font-weight: bold;
+}
+
+.my_audio {
+    display: none;
+}
