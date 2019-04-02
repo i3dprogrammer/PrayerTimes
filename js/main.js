@@ -1,5 +1,5 @@
-let timingsUrl = "http://api.aladhan.com/v1/timingsByCity?city=Giza&country=Egypt&method=5";
-let currentTimeUrl = "http://api.aladhan.com/v1/currentTime?zone=Africa/Cairo";
+let timingsUrl = "api.aladhan.com/v1/timingsByCity?city=Giza&country=Egypt&method=5";
+let currentTimeUrl = "api.aladhan.com/v1/currentTime?zone=Africa/Cairo";
 
 var fajr = null;
 var sunrise = null;
