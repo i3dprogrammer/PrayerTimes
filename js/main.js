@@ -98,10 +98,20 @@ function GetNextPrayer(){
       
       nextPrayer = next;
 
+      document.querySelectorAll(".time .item").forEach(x => {
+        if(x.classList.contains('red')){
+          x.classList.toggle('red');
+        }
+      });
+
       document.querySelector("." + next[0]).classList.toggle('red');
       current_prayer.textContent = namings[next[0]];
 
-      time_left = Math.abs(currTimeStamp - parseInt(parseInt(next[1].split(':')[0]) * 60 + parseInt(next[1].split(':')[1]))) * 60 | 0
+      var nextTimeStamp = parseInt(parseInt(next[1].split(':')[0]) * 60 + parseInt(next[1].split(':')[1]));
+      if(nextTimeStamp > currTimeStamp)
+        time_left = Math.abs(currTimeStamp - nextTimeStamp) * 60 | 0;
+      else
+        time_left = (Math.abs(24 * 60 - currTimeStamp) + nextTimeStamp) * 60;
       interval = setInterval(updateTimer, 1000);
     })
   })
